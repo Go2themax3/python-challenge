@@ -1,6 +1,6 @@
 import csv
 
-with open('budget_data.csv', 'r') as file:
+with open('budget_data.csv') as file:
 
     budget_data = csv.reader(file)
     next(budget_data)
