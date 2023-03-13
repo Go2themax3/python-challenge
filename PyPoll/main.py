@@ -35,5 +35,15 @@ with open('election_data.csv') as file:
     print("-------------------------")
     print(f"Winner: {winner}")
     print("-------------------------")
-
+    
+with open('analysis.txt', 'w') as output_file:
+        output_file.write("Election Results\n")
+        output_file.write("-------------------------\n")
+        output_file.write(f"Total Votes: {total_votes}\n")
+        output_file.write("-------------------------\n")
+        for candidate in candidate_votes:
+            output_file.write(f"{candidate}: {candidate_percentages[candidate]:.3f}% ({candidate_votes[candidate]})\n")
+        output_file.write("-------------------------\n")
+        output_file.write(f"Winner: {winner}\n")
+        output_file.write("-------------------------\n")
     
