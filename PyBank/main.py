@@ -40,6 +40,13 @@ with open('budget_data.csv') as file:
     print(f'Average change in profit/loss: {average_change}')
     print(f'Greatest increase in profit/loss: {greatest_increase[0]} ({greatest_increase[1]})')
     print(f'Greatest decrease in profit/loss: {greatest_decrease[0]} ({greatest_decrease[1]})')
+    
+with open('budget_data.csv', 'w') as output_file:
+        output_file.write(f'Total number of months: {total_months}\n')
+        output_file.write(f'Net profit/loss: {net_profit_loss}\n')
+        output_file.write(f'Average change in profit/loss: {average_change}\n')
+        output_file.write(f'Greatest increase in profit/loss: {greatest_increase[0]} ({greatest_increase[1]})\n')
+        output_file.write(f'Greatest decrease in profit/loss: {greatest_decrease[0]} ({greatest_decrease[1]})\n')
 
 
    
